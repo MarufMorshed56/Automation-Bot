@@ -12,7 +12,7 @@ import encodings.idna
 from utils import update_config_json, export_data_to_csv
 # from utils_2 import update_config_json, export_data_to_csv
 import scraper
-
+from qt_material import apply_stylesheet
 from pyautogui import confirm
 
 
@@ -385,6 +385,8 @@ if __name__ == '__main__':
 
     GUI = MyGui(mainWindow)
     # mainWindow.showMaximized()
+    apply_stylesheet(app, theme='light_lightgreen.xml')
+
     mainWindow.show()
 
     myMC = myMainClass()

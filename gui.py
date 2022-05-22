@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setUnderline(True)
         self.tabWidget.setFont(font)
-        self.tabWidget.setStyleSheet("background-color:rgb(238, 238, 238);")
+        self.tabWidget.setStyleSheet("")
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -1549,7 +1549,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

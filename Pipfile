@@ -8,6 +8,7 @@ selenium = "*"
 pyqt5 = "*"
 pyautogui = "*"
 pandas = "*"
+qt-material = "*"
 
 [dev-packages]
 
