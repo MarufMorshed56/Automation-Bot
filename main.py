@@ -26,75 +26,88 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         self.setupUi(mainWindow)
 
 
+def set_icon(obj):
+    try:
+        def resource_path(relative_path):
+            if hasattr(sys, '_MEIPASS'):
+                return os.path.join(sys._MEIPASS, relative_path)
+            return os.path.join(os.path.abspath("."), relative_path)
+
+        p = resource_path('icons/icon.png')
+        obj.setWindowIcon(QtGui.QIcon(p))
+    except Exception as e:
+        print(e)
+
+
 class myMainClass():
     def __init__(self):
 
         #  gui for Sales Navigator People &  Comapny Profile Scraper
-            GUI.lineEdit_email.setText(var.email)
-            GUI.lineEdit_password.setText(var.password)
-            GUI.pushButton_login.clicked.connect(self.start)
+        #     GUI.lineEdit_email.setText(var.email)
+        #     GUI.lineEdit_password.setText(var.password)
+        #     GUI.pushButton_login.clicked.connect(self.start)
+        GUI.tabWidget.setCurrentIndex(0)
+        GUI.tabWidget.currentChanged.connect(self.current_tab_no)
 
-            GUI.tabWidget.currentChanged.connect(self.current_tab_no)
+        GUI.spinBox_speed.valueChanged.connect(self.update_speed)
+        GUI.spinBox_try_count.valueChanged.connect(self.update_try_count)
+        # GUI.checkBox_remember_me.stateChanged.connect(
+        #     self.update_remember_me)
 
-            GUI.spinBox_speed.valueChanged.connect(self.update_speed)
-            GUI.spinBox_try_count.valueChanged.connect(self.update_try_count)
-            GUI.checkBox_remember_me.stateChanged.connect(
-                self.update_remember_me)
+    # current_tab = GUI.tabWidget.currentIndex()
 
-        # current_tab = GUI.tabWidget.currentIndex()
+    # if(GUI.tabWidget.currentIndex() == 0):
+        GUI.lineEdit_filename.setText(var.filename)
+        GUI.lineEdit_delay.setText(str(var.delay))
+        GUI.lineEdit_page_number.setText(str(var.page_number))
+        GUI.spinBox_speed.setValue(var.scrolling_step)
+        GUI.spinBox_try_count.setValue(var.try_count)
+        GUI.pushButton_start.clicked.connect(self.start_scrap)
+        GUI.pushButton_export.clicked.connect(self.export)
+        GUI.pushButton_close.clicked.connect(self.stop)
+        GUI.pause_btn.clicked.connect(self.pause_action)
+        # selection one of the options of Tab 0 i.e. profile / company scrape
+        GUI.people_option.clicked.connect(self.start_people_scrape)
+        GUI.company_option.clicked.connect(self.start_company_scrape)
 
-        # if(GUI.tabWidget.currentIndex() == 0):
-            GUI.lineEdit_filename.setText(var.filename)
-            GUI.lineEdit_delay.setText(str(var.delay))
-            GUI.lineEdit_page_number.setText(str(var.page_number))
-            GUI.spinBox_speed.setValue(var.scrolling_step)
-            GUI.spinBox_try_count.setValue(var.try_count)
-            GUI.pushButton_start.clicked.connect(self.start_scrap)
-            GUI.pushButton_export.clicked.connect(self.export)
-            GUI.pushButton_close.clicked.connect(self.stop)
-            GUI.pause_btn.clicked.connect(self.pause_action)
-            # selection one of the options of Tab 0 i.e. profile / company scrape
-            GUI.people_option.clicked.connect(self.start_people_scrape)
-            GUI.company_option.clicked.connect(self.start_company_scrape)
+    # if(GUI.tabWidget.currentIndex() == 1):
+        GUI.lineEdit_filename_2.setText(var.filename)
+        GUI.lineEdit_delay_2.setText(str(var.delay))
+        GUI.pushButton_export_2.clicked.connect(self.export)
+        GUI.pushButton_start_2.clicked.connect(self.start_scrap)
+        GUI.pushButton_close_2.clicked.connect(self.stop)
+        GUI.browse.clicked.connect(self.browsefiles)
+        GUI.pause_btn_2.clicked.connect(self.pause_action)
 
-        # if(GUI.tabWidget.currentIndex() == 1):
-            GUI.lineEdit_filename_2.setText(var.filename)
-            GUI.lineEdit_delay_2.setText(str(var.delay))
-            GUI.pushButton_export_2.clicked.connect(self.export)
-            GUI.pushButton_start_2.clicked.connect(self.start_scrap)
-            GUI.pushButton_close_2.clicked.connect(self.stop)
-            GUI.browse.clicked.connect(self.browsefiles)
-            GUI.pause_btn_2.clicked.connect(self.pause_action)
-    
-        # if(GUI.tabWidget.currentIndex() == 2):
-            GUI.lineEdit_filename_3.setText(var.filename)
-            GUI.lineEdit_delay_3.setText(str(var.delay))
-            GUI.lineEdit_page_number_2.setText(str(var.page_number))
-            GUI.pushButton_export_3.clicked.connect(self.export)
-            GUI.pushButton_start_3.clicked.connect(self.start_scrap)
-            GUI.pushButton_close_3.clicked.connect(self.stop)
-            GUI.pause_btn_3.clicked.connect(self.pause_action)
+    # if(GUI.tabWidget.currentIndex() == 2):
+        GUI.lineEdit_filename_3.setText(var.filename)
+        GUI.lineEdit_delay_3.setText(str(var.delay))
+        GUI.lineEdit_page_number_2.setText(str(var.page_number))
+        GUI.pushButton_export_3.clicked.connect(self.export)
+        GUI.pushButton_start_3.clicked.connect(self.start_scrap)
+        GUI.pushButton_close_3.clicked.connect(self.stop)
+        GUI.pause_btn_3.clicked.connect(self.pause_action)
 
-        # if(GUI.tabWidget.currentIndex() == 3):
-            GUI.lineEdit_filename_4.setText(var.filename)
-            GUI.lineEdit_delay_4.setText(str(var.delay))
-            GUI.browse_2.clicked.connect(self.browsefiles)
-            GUI.pushButton_export_4.clicked.connect(self.export)
-            GUI.pushButton_start_4.clicked.connect(self.start_scrap)
-            GUI.pushButton_close_4.clicked.connect(self.stop)
-            GUI.pause_btn_4.clicked.connect(self.pause_action)
-            GUI.select_btn.clicked.connect(self.combo_select)
+    # if(GUI.tabWidget.currentIndex() == 3):
+        GUI.lineEdit_filename_4.setText(var.filename)
+        GUI.lineEdit_delay_4.setText(str(var.delay))
+        GUI.browse_2.clicked.connect(self.browsefiles)
+        GUI.pushButton_export_4.clicked.connect(self.export)
+        GUI.pushButton_start_4.clicked.connect(self.start_scrap)
+        GUI.pushButton_close_4.clicked.connect(self.stop)
+        GUI.pause_btn_4.clicked.connect(self.pause_action)
+        GUI.select_btn.clicked.connect(self.combo_select)
 
-            GUI.connect_message.clicked.connect(self.connectMsg)
-            GUI.only_connect.clicked.connect(self.onlyConnect)
-            GUI.only_message.clicked.connect(self.onlyMsg)
+        GUI.connect_message.clicked.connect(self.connectMsg)
+        GUI.only_connect.clicked.connect(self.onlyConnect)
+        GUI.only_message.clicked.connect(self.onlyMsg)
 
 
-            
 
-            self.timer = QtCore.QTimer()
-            self.timer.timeout.connect(self.update_label)
-            self.timer.start(1000)
+
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.update_label)
+        self.timer.start(1000)
 
     # input Xlsx File Logic:
     def browsefiles(self):
@@ -365,16 +378,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = QtWidgets.QMainWindow()
-    # try:
-    #     def resource_path(relative_path):
-    #         if hasattr(sys, '_MEIPASS'):
-    #             return os.path.join(sys._MEIPASS, relative_path)
-    #         return os.path.join(os.path.abspath("."), relative_path)
-
-    #     p = resource_path('icons/settings_applications-24px.svg')
-    #     mainWindow.setWindowIcon(QtGui.QIcon(p))
-    # except Exception as e:
-    #     print(e)
+    set_icon(mainWindow)
 
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
@@ -388,5 +392,3 @@ if __name__ == '__main__':
     app.exec_()
     print("Exit")
     sys.exit()
-
-    label_status

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui.ui'
+# Form implementation generated from reading ui file 'ui\gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,17 +14,189 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(541, 777)
+        MainWindow.resize(677, 609)
+        MainWindow.setMaximumSize(QtCore.QSize(677, 613))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 210, 541, 551))
+        font = QtGui.QFont()
+        font.setUnderline(True)
+        self.tabWidget.setFont(font)
         self.tabWidget.setStyleSheet("background-color:rgb(238, 238, 238);")
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.tab)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.people_option = QtWidgets.QRadioButton(self.tab)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.people_option.setFont(font)
+        self.people_option.setChecked(True)
+        self.people_option.setObjectName("people_option")
+        self.gridLayout_2.addWidget(self.people_option, 2, 0, 1, 2)
+        self.lineEdit_delay = QtWidgets.QLineEdit(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_delay.sizePolicy().hasHeightForWidth())
+        self.lineEdit_delay.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_delay.setFont(font)
+        self.lineEdit_delay.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_delay.setMaxLength(2)
+        self.lineEdit_delay.setFrame(False)
+        self.lineEdit_delay.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_delay.setClearButtonEnabled(True)
+        self.lineEdit_delay.setObjectName("lineEdit_delay")
+        self.gridLayout_2.addWidget(self.lineEdit_delay, 8, 1, 1, 1)
+        self.pause_btn = QtWidgets.QPushButton(self.tab)
+        self.pause_btn.setMinimumSize(QtCore.QSize(120, 0))
+        self.pause_btn.setMaximumSize(QtCore.QSize(16777215, 36))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pause_btn.setFont(font)
+        self.pause_btn.setStyleSheet("QPushButton {\n"
+"    color: #000000;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pause_btn.setObjectName("pause_btn")
+        self.gridLayout_2.addWidget(self.pause_btn, 8, 2, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_2.addWidget(self.label_3, 11, 0, 1, 1)
+        self.label_7 = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_7.setFont(font)
+        self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout_2.addWidget(self.label_7, 7, 0, 1, 1)
+        self.lineEdit_page_number = QtWidgets.QLineEdit(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_page_number.sizePolicy().hasHeightForWidth())
+        self.lineEdit_page_number.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_page_number.setFont(font)
+        self.lineEdit_page_number.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_page_number.setMaxLength(3)
+        self.lineEdit_page_number.setFrame(False)
+        self.lineEdit_page_number.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_page_number.setClearButtonEnabled(True)
+        self.lineEdit_page_number.setObjectName("lineEdit_page_number")
+        self.gridLayout_2.addWidget(self.lineEdit_page_number, 9, 1, 1, 1)
+        self.lineEdit_filename = QtWidgets.QLineEdit(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_filename.sizePolicy().hasHeightForWidth())
+        self.lineEdit_filename.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_filename.setFont(font)
+        self.lineEdit_filename.setAutoFillBackground(False)
+        self.lineEdit_filename.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_filename.setMaxLength(500)
+        self.lineEdit_filename.setFrame(False)
+        self.lineEdit_filename.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_filename.setClearButtonEnabled(True)
+        self.lineEdit_filename.setObjectName("lineEdit_filename")
+        self.gridLayout_2.addWidget(self.lineEdit_filename, 11, 1, 1, 2)
+        self.spinBox_try_count = QtWidgets.QSpinBox(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.spinBox_try_count.sizePolicy().hasHeightForWidth())
+        self.spinBox_try_count.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.spinBox_try_count.setFont(font)
+        self.spinBox_try_count.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.spinBox_try_count.setFrame(False)
+        self.spinBox_try_count.setAlignment(QtCore.Qt.AlignCenter)
+        self.spinBox_try_count.setMinimum(2)
+        self.spinBox_try_count.setMaximum(50)
+        self.spinBox_try_count.setObjectName("spinBox_try_count")
+        self.gridLayout_2.addWidget(self.spinBox_try_count, 7, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_2.addWidget(self.label_5, 9, 0, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout_2.addWidget(self.label_4, 8, 0, 1, 1)
+        self.label_status = QtWidgets.QLabel(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_status.sizePolicy().hasHeightForWidth())
+        self.label_status.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_status.setFont(font)
+        self.label_status.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_status.setObjectName("label_status")
+        self.gridLayout_2.addWidget(self.label_status, 10, 0, 1, 3)
         self.pushButton_export = QtWidgets.QPushButton(self.tab)
-        self.pushButton_export.setGeometry(QtCore.QRect(200, 470, 107, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -38,7 +210,6 @@ class Ui_MainWindow(object):
         self.pushButton_export.setFont(font)
         self.pushButton_export.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -64,164 +235,8 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_export.setFlat(False)
         self.pushButton_export.setObjectName("pushButton_export")
-        self.pushButton_start = QtWidgets.QPushButton(self.tab)
-        self.pushButton_start.setGeometry(QtCore.QRect(350, 250, 121, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_start.sizePolicy().hasHeightForWidth())
-        self.pushButton_start.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_start.setFont(font)
-        self.pushButton_start.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pushButton_start.setObjectName("pushButton_start")
-        self.spinBox_speed = QtWidgets.QSpinBox(self.tab)
-        self.spinBox_speed.setGeometry(QtCore.QRect(170, 210, 171, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spinBox_speed.sizePolicy().hasHeightForWidth())
-        self.spinBox_speed.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.spinBox_speed.setFont(font)
-        self.spinBox_speed.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.spinBox_speed.setWrapping(False)
-        self.spinBox_speed.setFrame(False)
-        self.spinBox_speed.setAlignment(QtCore.Qt.AlignCenter)
-        self.spinBox_speed.setMinimum(-150)
-        self.spinBox_speed.setMaximum(6000)
-        self.spinBox_speed.setSingleStep(25)
-        self.spinBox_speed.setObjectName("spinBox_speed")
-        self.lineEdit_filename = QtWidgets.QLineEdit(self.tab)
-        self.lineEdit_filename.setGeometry(QtCore.QRect(170, 430, 302, 33))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_filename.sizePolicy().hasHeightForWidth())
-        self.lineEdit_filename.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_filename.setFont(font)
-        self.lineEdit_filename.setAutoFillBackground(False)
-        self.lineEdit_filename.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_filename.setMaxLength(500)
-        self.lineEdit_filename.setFrame(False)
-        self.lineEdit_filename.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_filename.setClearButtonEnabled(True)
-        self.lineEdit_filename.setObjectName("lineEdit_filename")
-        self.label_7 = QtWidgets.QLabel(self.tab)
-        self.label_7.setGeometry(QtCore.QRect(70, 250, 73, 33))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_7.setFont(font)
-        self.label_7.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_7.setObjectName("label_7")
-        self.lineEdit_page_number = QtWidgets.QLineEdit(self.tab)
-        self.lineEdit_page_number.setGeometry(QtCore.QRect(172, 330, 171, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_page_number.sizePolicy().hasHeightForWidth())
-        self.lineEdit_page_number.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_page_number.setFont(font)
-        self.lineEdit_page_number.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_page_number.setMaxLength(3)
-        self.lineEdit_page_number.setFrame(False)
-        self.lineEdit_page_number.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_page_number.setClearButtonEnabled(True)
-        self.lineEdit_page_number.setObjectName("lineEdit_page_number")
-        self.label_4 = QtWidgets.QLabel(self.tab)
-        self.label_4.setGeometry(QtCore.QRect(89, 290, 42, 34))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.lineEdit_delay = QtWidgets.QLineEdit(self.tab)
-        self.lineEdit_delay.setGeometry(QtCore.QRect(172, 290, 171, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_delay.sizePolicy().hasHeightForWidth())
-        self.lineEdit_delay.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_delay.setFont(font)
-        self.lineEdit_delay.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_delay.setMaxLength(2)
-        self.lineEdit_delay.setFrame(False)
-        self.lineEdit_delay.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_delay.setClearButtonEnabled(True)
-        self.lineEdit_delay.setObjectName("lineEdit_delay")
-        self.spinBox_try_count = QtWidgets.QSpinBox(self.tab)
-        self.spinBox_try_count.setGeometry(QtCore.QRect(169, 250, 171, 33))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spinBox_try_count.sizePolicy().hasHeightForWidth())
-        self.spinBox_try_count.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.spinBox_try_count.setFont(font)
-        self.spinBox_try_count.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.spinBox_try_count.setFrame(False)
-        self.spinBox_try_count.setAlignment(QtCore.Qt.AlignCenter)
-        self.spinBox_try_count.setMinimum(2)
-        self.spinBox_try_count.setMaximum(50)
-        self.spinBox_try_count.setObjectName("spinBox_try_count")
-        self.label_3 = QtWidgets.QLabel(self.tab)
-        self.label_3.setGeometry(QtCore.QRect(70, 430, 68, 33))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
+        self.gridLayout_2.addWidget(self.pushButton_export, 12, 1, 1, 1)
         self.pushButton_close = QtWidgets.QPushButton(self.tab)
-        self.pushButton_close.setGeometry(QtCore.QRect(350, 330, 121, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -235,7 +250,6 @@ class Ui_MainWindow(object):
         self.pushButton_close.setFont(font)
         self.pushButton_close.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -260,101 +274,26 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_close.setObjectName("pushButton_close")
-        self.label_6 = QtWidgets.QLabel(self.tab)
-        self.label_6.setGeometry(QtCore.QRect(84, 210, 47, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
-        self.label_6.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
-        self.label_status = QtWidgets.QLabel(self.tab)
-        self.label_status.setGeometry(QtCore.QRect(50, 380, 426, 34))
+        self.gridLayout_2.addWidget(self.pushButton_close, 9, 2, 1, 1)
+        self.pushButton_start = QtWidgets.QPushButton(self.tab)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_status.sizePolicy().hasHeightForWidth())
-        self.label_status.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.pushButton_start.sizePolicy().hasHeightForWidth())
+        self.pushButton_start.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_status.setFont(font)
-        self.label_status.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_status.setObjectName("label_status")
-        self.label_5 = QtWidgets.QLabel(self.tab)
-        self.label_5.setGeometry(QtCore.QRect(55, 330, 110, 34))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.people_option = QtWidgets.QRadioButton(self.tab)
-        self.people_option.setGeometry(QtCore.QRect(30, 130, 221, 20))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.people_option.setFont(font)
-        self.people_option.setObjectName("people_option")
-        self.company_option = QtWidgets.QRadioButton(self.tab)
-        self.company_option.setGeometry(QtCore.QRect(30, 160, 241, 20))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.company_option.setFont(font)
-        self.company_option.setObjectName("company_option")
-        self.textBrowser_2 = QtWidgets.QTextBrowser(self.tab)
-        self.textBrowser_2.setGeometry(QtCore.QRect(10, 80, 311, 38))
-        self.textBrowser_2.setMinimumSize(QtCore.QSize(240, 38))
-        self.textBrowser_2.setMaximumSize(QtCore.QSize(350, 38))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(True)
-        font.setWeight(50)
-        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
-        self.textBrowser_2.setFont(font)
-        self.textBrowser_2.setStyleSheet("border:none;\n"
-"background-color:rgb(230, 230, 230);")
-        self.textBrowser_2.setObjectName("textBrowser_2")
-        self.textEdit = QtWidgets.QTextEdit(self.tab)
-        self.textEdit.setGeometry(QtCore.QRect(50, 20, 431, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet("background-color:rgb(248, 244, 244);")
-        self.textEdit.setObjectName("textEdit")
-        self.pause_btn = QtWidgets.QPushButton(self.tab)
-        self.pause_btn.setGeometry(QtCore.QRect(350, 290, 121, 36))
-        self.pause_btn.setMinimumSize(QtCore.QSize(120, 0))
-        self.pause_btn.setMaximumSize(QtCore.QSize(16777215, 36))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pause_btn.setFont(font)
-        self.pause_btn.setStyleSheet("QPushButton {\n"
-"    color: #000000;\n"
-"    border: 1px solid #555;\n"
+        self.pushButton_start.setFont(font)
+        self.pushButton_start.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
 "        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
 "        );\n"
 "    padding: 5px 28px;\n"
 "    }\n"
@@ -373,28 +312,85 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.pause_btn.setObjectName("pause_btn")
+        self.pushButton_start.setObjectName("pushButton_start")
+        self.gridLayout_2.addWidget(self.pushButton_start, 7, 2, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
+        self.label_6.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_2.addWidget(self.label_6, 6, 0, 1, 1)
+        self.spinBox_speed = QtWidgets.QSpinBox(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.spinBox_speed.sizePolicy().hasHeightForWidth())
+        self.spinBox_speed.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.spinBox_speed.setFont(font)
+        self.spinBox_speed.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.spinBox_speed.setWrapping(False)
+        self.spinBox_speed.setFrame(False)
+        self.spinBox_speed.setAlignment(QtCore.Qt.AlignCenter)
+        self.spinBox_speed.setMinimum(-150)
+        self.spinBox_speed.setMaximum(6000)
+        self.spinBox_speed.setSingleStep(25)
+        self.spinBox_speed.setObjectName("spinBox_speed")
+        self.gridLayout_2.addWidget(self.spinBox_speed, 6, 1, 1, 1)
+        self.company_option = QtWidgets.QRadioButton(self.tab)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.company_option.setFont(font)
+        self.company_option.setObjectName("company_option")
+        self.gridLayout_2.addWidget(self.company_option, 3, 0, 1, 2)
+        self.label = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(18)
+        font.setUnderline(True)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 3, QtCore.Qt.AlignHCenter)
+        self.label_26 = QtWidgets.QLabel(self.tab)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(16)
+        self.label_26.setFont(font)
+        self.label_26.setObjectName("label_26")
+        self.gridLayout_2.addWidget(self.label_26, 1, 0, 1, 2)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.tab_2)
+        self.gridLayout_3.setObjectName("gridLayout_3")
         self.pushButton_start_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_start_2.setGeometry(QtCore.QRect(21, 205, 170, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_start_2.sizePolicy().hasHeightForWidth())
         self.pushButton_start_2.setSizePolicy(sizePolicy)
-        self.pushButton_start_2.setMinimumSize(QtCore.QSize(170, 40))
-        self.pushButton_start_2.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.pushButton_start_2.setMinimumSize(QtCore.QSize(0, 0))
+        self.pushButton_start_2.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(16)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Times New Roman")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
         self.pushButton_start_2.setFont(font)
         self.pushButton_start_2.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -419,43 +415,39 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_start_2.setObjectName("pushButton_start_2")
-        self.lineEdit_filename_2 = QtWidgets.QLineEdit(self.tab_2)
-        self.lineEdit_filename_2.setGeometry(QtCore.QRect(110, 440, 254, 40))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_filename_2.sizePolicy().hasHeightForWidth())
-        self.lineEdit_filename_2.setSizePolicy(sizePolicy)
-        self.lineEdit_filename_2.setMaximumSize(QtCore.QSize(350, 40))
+        self.gridLayout_3.addWidget(self.pushButton_start_2, 3, 0, 1, 2)
+        self.label_2 = QtWidgets.QLabel(self.tab_2)
+        self.label_2.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_filename_2.setFont(font)
-        self.lineEdit_filename_2.setAutoFillBackground(False)
-        self.lineEdit_filename_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_filename_2.setMaxLength(500)
-        self.lineEdit_filename_2.setFrame(False)
-        self.lineEdit_filename_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_filename_2.setClearButtonEnabled(True)
-        self.lineEdit_filename_2.setObjectName("lineEdit_filename_2")
-        self.pause_btn_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pause_btn_2.setGeometry(QtCore.QRect(21, 247, 131, 36))
-        self.pause_btn_2.setMinimumSize(QtCore.QSize(120, 0))
-        self.pause_btn_2.setMaximumSize(QtCore.QSize(16777215, 36))
+        font.setFamily("Times New Roman")
+        font.setPointSize(18)
+        font.setUnderline(True)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_3.addWidget(self.label_2, 0, 0, 1, 5, QtCore.Qt.AlignHCenter)
+        self.filename = QtWidgets.QLineEdit(self.tab_2)
+        self.filename.setMinimumSize(QtCore.QSize(480, 38))
+        self.filename.setMaximumSize(QtCore.QSize(480, 30))
+        self.filename.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.filename.setFrame(False)
+        self.filename.setObjectName("filename")
+        self.gridLayout_3.addWidget(self.filename, 2, 0, 1, 5)
+        self.browse = QtWidgets.QPushButton(self.tab_2)
+        self.browse.setMinimumSize(QtCore.QSize(180, 30))
+        self.browse.setMaximumSize(QtCore.QSize(180, 30))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
+        font.setFamily("Times New Roman")
         font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pause_btn_2.setFont(font)
-        self.pause_btn_2.setStyleSheet("QPushButton {\n"
-"    color: #000000;\n"
-"    border: 1px solid #555;\n"
+        font.setBold(False)
+        font.setWeight(50)
+        self.browse.setFont(font)
+        self.browse.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
 "        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
 "        );\n"
 "    padding: 5px 28px;\n"
 "    }\n"
@@ -474,19 +466,9 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.pause_btn_2.setObjectName("pause_btn_2")
-        self.label_8 = QtWidgets.QLabel(self.tab_2)
-        self.label_8.setGeometry(QtCore.QRect(297, 247, 100, 36))
-        self.label_8.setMaximumSize(QtCore.QSize(150, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_8.setFont(font)
-        self.label_8.setObjectName("label_8")
+        self.browse.setObjectName("browse")
+        self.gridLayout_3.addWidget(self.browse, 1, 0, 1, 2)
         self.label_9 = QtWidgets.QLabel(self.tab_2)
-        self.label_9.setGeometry(QtCore.QRect(21, 442, 81, 31))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -494,87 +476,25 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_9.setFont(font)
         self.label_9.setObjectName("label_9")
-        self.browse = QtWidgets.QPushButton(self.tab_2)
-        self.browse.setGeometry(QtCore.QRect(21, 108, 200, 40))
-        self.browse.setMinimumSize(QtCore.QSize(200, 0))
-        self.browse.setMaximumSize(QtCore.QSize(300, 40))
+        self.gridLayout_3.addWidget(self.label_9, 8, 0, 1, 1)
+        self.label_status_2 = QtWidgets.QLabel(self.tab_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_status_2.sizePolicy().hasHeightForWidth())
+        self.label_status_2.setSizePolicy(sizePolicy)
+        self.label_status_2.setMinimumSize(QtCore.QSize(400, 60))
+        self.label_status_2.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
-        self.browse.setFont(font)
-        self.browse.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    ")
-        self.browse.setObjectName("browse")
-        self.pushButton_close_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_close_2.setGeometry(QtCore.QRect(21, 290, 131, 40))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_close_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_close_2.setSizePolicy(sizePolicy)
-        self.pushButton_close_2.setMinimumSize(QtCore.QSize(120, 30))
-        self.pushButton_close_2.setMaximumSize(QtCore.QSize(16777215, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_close_2.setFont(font)
-        self.pushButton_close_2.setStyleSheet("QPushButton {\n"
-"    color: #FF0000;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pushButton_close_2.setObjectName("pushButton_close_2")
+        self.label_status_2.setFont(font)
+        self.label_status_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_status_2.setObjectName("label_status_2")
+        self.gridLayout_3.addWidget(self.label_status_2, 7, 0, 1, 5)
         self.pushButton_export_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_export_2.setGeometry(QtCore.QRect(390, 440, 107, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -589,7 +509,6 @@ class Ui_MainWindow(object):
         self.pushButton_export_2.setFont(font)
         self.pushButton_export_2.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -615,37 +534,33 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_export_2.setFlat(False)
         self.pushButton_export_2.setObjectName("pushButton_export_2")
-        self.filename = QtWidgets.QLineEdit(self.tab_2)
-        self.filename.setGeometry(QtCore.QRect(21, 159, 480, 38))
-        self.filename.setMinimumSize(QtCore.QSize(480, 38))
-        self.filename.setMaximumSize(QtCore.QSize(480, 30))
-        self.filename.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.filename.setObjectName("filename")
-        self.label_status_2 = QtWidgets.QLabel(self.tab_2)
-        self.label_status_2.setGeometry(QtCore.QRect(10, 360, 500, 60))
+        self.gridLayout_3.addWidget(self.pushButton_export_2, 8, 3, 1, 2)
+        self.lineEdit_filename_2 = QtWidgets.QLineEdit(self.tab_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_status_2.sizePolicy().hasHeightForWidth())
-        self.label_status_2.setSizePolicy(sizePolicy)
-        self.label_status_2.setMinimumSize(QtCore.QSize(400, 60))
-        self.label_status_2.setMaximumSize(QtCore.QSize(16777215, 30))
+        sizePolicy.setHeightForWidth(self.lineEdit_filename_2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_filename_2.setSizePolicy(sizePolicy)
+        self.lineEdit_filename_2.setMaximumSize(QtCore.QSize(350, 40))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_status_2.setFont(font)
-        self.label_status_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_status_2.setObjectName("label_status_2")
+        font.setPointSize(11)
+        self.lineEdit_filename_2.setFont(font)
+        self.lineEdit_filename_2.setAutoFillBackground(False)
+        self.lineEdit_filename_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_filename_2.setMaxLength(500)
+        self.lineEdit_filename_2.setFrame(False)
+        self.lineEdit_filename_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_filename_2.setClearButtonEnabled(True)
+        self.lineEdit_filename_2.setObjectName("lineEdit_filename_2")
+        self.gridLayout_3.addWidget(self.lineEdit_filename_2, 8, 1, 1, 2)
         self.lineEdit_delay_2 = QtWidgets.QLineEdit(self.tab_2)
-        self.lineEdit_delay_2.setGeometry(QtCore.QRect(420, 250, 70, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lineEdit_delay_2.sizePolicy().hasHeightForWidth())
         self.lineEdit_delay_2.setSizePolicy(sizePolicy)
-        self.lineEdit_delay_2.setMaximumSize(QtCore.QSize(70, 30))
+        self.lineEdit_delay_2.setMaximumSize(QtCore.QSize(100, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -656,32 +571,22 @@ class Ui_MainWindow(object):
         self.lineEdit_delay_2.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_delay_2.setClearButtonEnabled(True)
         self.lineEdit_delay_2.setObjectName("lineEdit_delay_2")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.tab_2)
-        self.textEdit_2.setGeometry(QtCore.QRect(0, 20, 531, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit_2.setFont(font)
-        self.textEdit_2.setStyleSheet("background-color:rgb(248, 244, 244);")
-        self.textEdit_2.setObjectName("textEdit_2")
-        self.tabWidget.addTab(self.tab_2, "")
-        self.tab_3 = QtWidgets.QWidget()
-        self.tab_3.setObjectName("tab_3")
-        self.pushButton_close_3 = QtWidgets.QPushButton(self.tab_3)
-        self.pushButton_close_3.setGeometry(QtCore.QRect(340, 240, 121, 34))
+        self.gridLayout_3.addWidget(self.lineEdit_delay_2, 6, 1, 1, 1)
+        self.pushButton_close_2 = QtWidgets.QPushButton(self.tab_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_close_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_close_3.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.pushButton_close_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_close_2.setSizePolicy(sizePolicy)
+        self.pushButton_close_2.setMinimumSize(QtCore.QSize(120, 30))
+        self.pushButton_close_2.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_close_3.setFont(font)
-        self.pushButton_close_3.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
+        font.setFamily("Times New Roman")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_close_2.setFont(font)
+        self.pushButton_close_2.setStyleSheet("QPushButton {\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -705,14 +610,63 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.pushButton_close_3.setObjectName("pushButton_close_3")
+        self.pushButton_close_2.setObjectName("pushButton_close_2")
+        self.gridLayout_3.addWidget(self.pushButton_close_2, 3, 4, 1, 1)
+        self.pause_btn_2 = QtWidgets.QPushButton(self.tab_2)
+        self.pause_btn_2.setMinimumSize(QtCore.QSize(120, 0))
+        self.pause_btn_2.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pause_btn_2.setFont(font)
+        self.pause_btn_2.setStyleSheet("QPushButton {\n"
+"    color: #000000;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pause_btn_2.setObjectName("pause_btn_2")
+        self.gridLayout_3.addWidget(self.pause_btn_2, 3, 3, 1, 1)
+        self.label_8 = QtWidgets.QLabel(self.tab_2)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_8.setFont(font)
+        self.label_8.setObjectName("label_8")
+        self.gridLayout_3.addWidget(self.label_8, 6, 0, 1, 1)
+        self.tabWidget.addTab(self.tab_2, "")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.tab_3)
+        self.gridLayout_4.setObjectName("gridLayout_4")
         self.label_status_3 = QtWidgets.QLabel(self.tab_3)
-        self.label_status_3.setGeometry(QtCore.QRect(40, 300, 426, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_status_3.sizePolicy().hasHeightForWidth())
         self.label_status_3.setSizePolicy(sizePolicy)
+        self.label_status_3.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -721,13 +675,33 @@ class Ui_MainWindow(object):
         self.label_status_3.setFont(font)
         self.label_status_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_status_3.setObjectName("label_status_3")
+        self.gridLayout_4.addWidget(self.label_status_3, 8, 0, 1, 4)
+        self.lineEdit_filename_3 = QtWidgets.QLineEdit(self.tab_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_filename_3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_filename_3.setSizePolicy(sizePolicy)
+        self.lineEdit_filename_3.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_filename_3.setFont(font)
+        self.lineEdit_filename_3.setAutoFillBackground(False)
+        self.lineEdit_filename_3.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_filename_3.setMaxLength(500)
+        self.lineEdit_filename_3.setFrame(False)
+        self.lineEdit_filename_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_filename_3.setClearButtonEnabled(True)
+        self.lineEdit_filename_3.setObjectName("lineEdit_filename_3")
+        self.gridLayout_4.addWidget(self.lineEdit_filename_3, 9, 1, 1, 3)
         self.pushButton_export_3 = QtWidgets.QPushButton(self.tab_3)
-        self.pushButton_export_3.setGeometry(QtCore.QRect(200, 420, 107, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_export_3.sizePolicy().hasHeightForWidth())
         self.pushButton_export_3.setSizePolicy(sizePolicy)
+        self.pushButton_export_3.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -736,7 +710,6 @@ class Ui_MainWindow(object):
         self.pushButton_export_3.setFont(font)
         self.pushButton_export_3.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -762,26 +735,17 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_export_3.setFlat(False)
         self.pushButton_export_3.setObjectName("pushButton_export_3")
-        self.label_12 = QtWidgets.QLabel(self.tab_3)
-        self.label_12.setGeometry(QtCore.QRect(74, 360, 68, 33))
+        self.gridLayout_4.addWidget(self.pushButton_export_3, 10, 1, 1, 1)
+        self.label_18 = QtWidgets.QLabel(self.tab_3)
+        self.label_18.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_12.setFont(font)
-        self.label_12.setObjectName("label_12")
-        self.label_13 = QtWidgets.QLabel(self.tab_3)
-        self.label_13.setGeometry(QtCore.QRect(36, 200, 110, 34))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_13.setFont(font)
-        self.label_13.setObjectName("label_13")
+        font.setFamily("Times New Roman")
+        font.setPointSize(18)
+        font.setUnderline(True)
+        self.label_18.setFont(font)
+        self.label_18.setObjectName("label_18")
+        self.gridLayout_4.addWidget(self.label_18, 0, 0, 1, 4, QtCore.Qt.AlignHCenter)
         self.label_14 = QtWidgets.QLabel(self.tab_3)
-        self.label_14.setGeometry(QtCore.QRect(70, 140, 42, 34))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -789,13 +753,14 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_14.setFont(font)
         self.label_14.setObjectName("label_14")
+        self.gridLayout_4.addWidget(self.label_14, 1, 0, 1, 1)
         self.lineEdit_delay_3 = QtWidgets.QLineEdit(self.tab_3)
-        self.lineEdit_delay_3.setGeometry(QtCore.QRect(153, 140, 171, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lineEdit_delay_3.sizePolicy().hasHeightForWidth())
         self.lineEdit_delay_3.setSizePolicy(sizePolicy)
+        self.lineEdit_delay_3.setMaximumSize(QtCore.QSize(300, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -806,13 +771,23 @@ class Ui_MainWindow(object):
         self.lineEdit_delay_3.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_delay_3.setClearButtonEnabled(True)
         self.lineEdit_delay_3.setObjectName("lineEdit_delay_3")
+        self.gridLayout_4.addWidget(self.lineEdit_delay_3, 1, 1, 1, 1)
+        self.label_13 = QtWidgets.QLabel(self.tab_3)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_13.setFont(font)
+        self.label_13.setObjectName("label_13")
+        self.gridLayout_4.addWidget(self.label_13, 3, 0, 1, 1)
         self.lineEdit_page_number_2 = QtWidgets.QLineEdit(self.tab_3)
-        self.lineEdit_page_number_2.setGeometry(QtCore.QRect(153, 200, 171, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lineEdit_page_number_2.sizePolicy().hasHeightForWidth())
         self.lineEdit_page_number_2.setSizePolicy(sizePolicy)
+        self.lineEdit_page_number_2.setMaximumSize(QtCore.QSize(300, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -823,75 +798,19 @@ class Ui_MainWindow(object):
         self.lineEdit_page_number_2.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_page_number_2.setClearButtonEnabled(True)
         self.lineEdit_page_number_2.setObjectName("lineEdit_page_number_2")
-        self.pushButton_start_3 = QtWidgets.QPushButton(self.tab_3)
-        self.pushButton_start_3.setGeometry(QtCore.QRect(340, 140, 121, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_start_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_start_3.setSizePolicy(sizePolicy)
+        self.gridLayout_4.addWidget(self.lineEdit_page_number_2, 3, 1, 1, 1)
+        self.label_12 = QtWidgets.QLabel(self.tab_3)
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_start_3.setFont(font)
-        self.pushButton_start_3.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pushButton_start_3.setObjectName("pushButton_start_3")
-        self.lineEdit_filename_3 = QtWidgets.QLineEdit(self.tab_3)
-        self.lineEdit_filename_3.setGeometry(QtCore.QRect(170, 360, 302, 33))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_filename_3.sizePolicy().hasHeightForWidth())
-        self.lineEdit_filename_3.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_filename_3.setFont(font)
-        self.lineEdit_filename_3.setAutoFillBackground(False)
-        self.lineEdit_filename_3.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_filename_3.setMaxLength(500)
-        self.lineEdit_filename_3.setFrame(False)
-        self.lineEdit_filename_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_filename_3.setClearButtonEnabled(True)
-        self.lineEdit_filename_3.setObjectName("lineEdit_filename_3")
-        self.textEdit_3 = QtWidgets.QTextEdit(self.tab_3)
-        self.textEdit_3.setGeometry(QtCore.QRect(50, 30, 411, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit_3.setFont(font)
-        self.textEdit_3.setStyleSheet("background-color:rgb(248, 244, 244);")
-        self.textEdit_3.setObjectName("textEdit_3")
+        self.label_12.setFont(font)
+        self.label_12.setObjectName("label_12")
+        self.gridLayout_4.addWidget(self.label_12, 9, 0, 1, 1)
         self.pause_btn_3 = QtWidgets.QPushButton(self.tab_3)
-        self.pause_btn_3.setGeometry(QtCore.QRect(340, 190, 121, 36))
         self.pause_btn_3.setMinimumSize(QtCore.QSize(120, 0))
-        self.pause_btn_3.setMaximumSize(QtCore.QSize(16777215, 36))
+        self.pause_btn_3.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(10)
@@ -900,7 +819,6 @@ class Ui_MainWindow(object):
         self.pause_btn_3.setFont(font)
         self.pause_btn_3.setStyleSheet("QPushButton {\n"
 "    color: #000000;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -925,402 +843,101 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pause_btn_3.setObjectName("pause_btn_3")
+        self.gridLayout_4.addWidget(self.pause_btn_3, 3, 2, 1, 1)
+        self.pushButton_start_3 = QtWidgets.QPushButton(self.tab_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_start_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_start_3.setSizePolicy(sizePolicy)
+        self.pushButton_start_3.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_start_3.setFont(font)
+        self.pushButton_start_3.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pushButton_start_3.setObjectName("pushButton_start_3")
+        self.gridLayout_4.addWidget(self.pushButton_start_3, 1, 2, 1, 1)
+        self.pushButton_close_3 = QtWidgets.QPushButton(self.tab_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_close_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_close_3.setSizePolicy(sizePolicy)
+        self.pushButton_close_3.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_close_3.setFont(font)
+        self.pushButton_close_3.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pushButton_close_3.setObjectName("pushButton_close_3")
+        self.gridLayout_4.addWidget(self.pushButton_close_3, 6, 2, 1, 1)
         self.tabWidget.addTab(self.tab_3, "")
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
-        self.lineEdit_delay_4 = QtWidgets.QLineEdit(self.tab_4)
-        self.lineEdit_delay_4.setGeometry(QtCore.QRect(420, 220, 70, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_delay_4.sizePolicy().hasHeightForWidth())
-        self.lineEdit_delay_4.setSizePolicy(sizePolicy)
-        self.lineEdit_delay_4.setMaximumSize(QtCore.QSize(70, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_delay_4.setFont(font)
-        self.lineEdit_delay_4.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_delay_4.setMaxLength(2)
-        self.lineEdit_delay_4.setFrame(False)
-        self.lineEdit_delay_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_delay_4.setClearButtonEnabled(True)
-        self.lineEdit_delay_4.setObjectName("lineEdit_delay_4")
-        self.label_10 = QtWidgets.QLabel(self.tab_4)
-        self.label_10.setGeometry(QtCore.QRect(40, 480, 71, 34))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_10.setFont(font)
-        self.label_10.setObjectName("label_10")
-        self.label_11 = QtWidgets.QLabel(self.tab_4)
-        self.label_11.setGeometry(QtCore.QRect(374, 128, 1, 1))
-        self.label_11.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_11.setFont(font)
-        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_11.setObjectName("label_11")
-        self.only_connect = QtWidgets.QRadioButton(self.tab_4)
-        self.only_connect.setGeometry(QtCore.QRect(26, 257, 211, 30))
-        self.only_connect.setMinimumSize(QtCore.QSize(200, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        self.only_connect.setFont(font)
-        self.only_connect.setObjectName("only_connect")
-        self.lineEdit_filename_4 = QtWidgets.QLineEdit(self.tab_4)
-        self.lineEdit_filename_4.setGeometry(QtCore.QRect(130, 480, 241, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_filename_4.sizePolicy().hasHeightForWidth())
-        self.lineEdit_filename_4.setSizePolicy(sizePolicy)
-        self.lineEdit_filename_4.setMaximumSize(QtCore.QSize(350, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_filename_4.setFont(font)
-        self.lineEdit_filename_4.setAutoFillBackground(False)
-        self.lineEdit_filename_4.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_filename_4.setMaxLength(500)
-        self.lineEdit_filename_4.setFrame(False)
-        self.lineEdit_filename_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_filename_4.setClearButtonEnabled(True)
-        self.lineEdit_filename_4.setObjectName("lineEdit_filename_4")
-        self.connect_message = QtWidgets.QRadioButton(self.tab_4)
-        self.connect_message.setEnabled(True)
-        self.connect_message.setGeometry(QtCore.QRect(26, 222, 271, 30))
-        self.connect_message.setMinimumSize(QtCore.QSize(250, 30))
-        self.connect_message.setMaximumSize(QtCore.QSize(300, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        self.connect_message.setFont(font)
-        self.connect_message.setObjectName("connect_message")
-        self.pushButton_close_4 = QtWidgets.QPushButton(self.tab_4)
-        self.pushButton_close_4.setGeometry(QtCore.QRect(380, 390, 120, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_close_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_close_4.setSizePolicy(sizePolicy)
-        self.pushButton_close_4.setMinimumSize(QtCore.QSize(120, 30))
-        self.pushButton_close_4.setMaximumSize(QtCore.QSize(16777215, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_close_4.setFont(font)
-        self.pushButton_close_4.setStyleSheet("QPushButton {\n"
-"    color: #FF0000;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pushButton_close_4.setObjectName("pushButton_close_4")
-        self.browse_2 = QtWidgets.QPushButton(self.tab_4)
-        self.browse_2.setGeometry(QtCore.QRect(26, 83, 181, 40))
-        self.browse_2.setMinimumSize(QtCore.QSize(100, 0))
-        self.browse_2.setMaximumSize(QtCore.QSize(400, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.browse_2.setFont(font)
-        self.browse_2.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    ")
-        self.browse_2.setObjectName("browse_2")
-        self.label_15 = QtWidgets.QLabel(self.tab_4)
-        self.label_15.setGeometry(QtCore.QRect(310, 220, 109, 30))
-        self.label_15.setMaximumSize(QtCore.QSize(150, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_15.setFont(font)
-        self.label_15.setObjectName("label_15")
-        self.pushButton_start_4 = QtWidgets.QPushButton(self.tab_4)
-        self.pushButton_start_4.setGeometry(QtCore.QRect(330, 300, 170, 40))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_start_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_start_4.setSizePolicy(sizePolicy)
-        self.pushButton_start_4.setMinimumSize(QtCore.QSize(170, 40))
-        self.pushButton_start_4.setMaximumSize(QtCore.QSize(16777215, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(16)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_start_4.setFont(font)
-        self.pushButton_start_4.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pushButton_start_4.setObjectName("pushButton_start_4")
-        self.pause_btn_4 = QtWidgets.QPushButton(self.tab_4)
-        self.pause_btn_4.setGeometry(QtCore.QRect(380, 350, 120, 36))
-        self.pause_btn_4.setMinimumSize(QtCore.QSize(120, 0))
-        self.pause_btn_4.setMaximumSize(QtCore.QSize(16777215, 36))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pause_btn_4.setFont(font)
-        self.pause_btn_4.setStyleSheet("QPushButton {\n"
-"    color: #000000;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
-        self.pause_btn_4.setObjectName("pause_btn_4")
-        self.filename_2 = QtWidgets.QLineEdit(self.tab_4)
-        self.filename_2.setGeometry(QtCore.QRect(26, 134, 480, 38))
-        self.filename_2.setMinimumSize(QtCore.QSize(480, 38))
-        self.filename_2.setMaximumSize(QtCore.QSize(480, 30))
-        self.filename_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.filename_2.setObjectName("filename_2")
-        self.comboX = QtWidgets.QComboBox(self.tab_4)
-        self.comboX.setGeometry(QtCore.QRect(10, 340, 281, 40))
-        self.comboX.setMinimumSize(QtCore.QSize(200, 40))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.comboX.setFont(font)
-        self.comboX.setAutoFillBackground(False)
-        self.comboX.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.comboX.setObjectName("comboX")
-        self.comboX.addItem("")
-        self.comboX.addItem("")
-        self.comboX.addItem("")
-        self.textBrowser = QtWidgets.QTextBrowser(self.tab_4)
-        self.textBrowser.setGeometry(QtCore.QRect(10, 180, 311, 38))
-        self.textBrowser.setMinimumSize(QtCore.QSize(240, 38))
-        self.textBrowser.setMaximumSize(QtCore.QSize(350, 38))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(16)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setUnderline(True)
-        font.setWeight(75)
-        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
-        self.textBrowser.setFont(font)
-        self.textBrowser.setStyleSheet("border:none;\n"
-"background-color:rgb(230, 230, 230);")
-        self.textBrowser.setObjectName("textBrowser")
-        self.label_16 = QtWidgets.QLabel(self.tab_4)
-        self.label_16.setGeometry(QtCore.QRect(374, 382, 1, 1))
-        self.label_16.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_16.setFont(font)
-        self.label_16.setObjectName("label_16")
-        self.lineEdit_page_number_3 = QtWidgets.QLineEdit(self.tab_4)
-        self.lineEdit_page_number_3.setGeometry(QtCore.QRect(382, 382, 1, 1))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_page_number_3.sizePolicy().hasHeightForWidth())
-        self.lineEdit_page_number_3.setSizePolicy(sizePolicy)
-        self.lineEdit_page_number_3.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_page_number_3.setFont(font)
-        self.lineEdit_page_number_3.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_page_number_3.setMaxLength(3)
-        self.lineEdit_page_number_3.setFrame(False)
-        self.lineEdit_page_number_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_page_number_3.setClearButtonEnabled(True)
-        self.lineEdit_page_number_3.setObjectName("lineEdit_page_number_3")
-        self.label_17 = QtWidgets.QLabel(self.tab_4)
-        self.label_17.setGeometry(QtCore.QRect(374, 82, 1, 1))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
-        self.label_17.setSizePolicy(sizePolicy)
-        self.label_17.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_17.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_17.setFont(font)
-        self.label_17.setObjectName("label_17")
-        self.spinBox_speed_2 = QtWidgets.QSpinBox(self.tab_4)
-        self.spinBox_speed_2.setGeometry(QtCore.QRect(382, 82, 1, 1))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spinBox_speed_2.sizePolicy().hasHeightForWidth())
-        self.spinBox_speed_2.setSizePolicy(sizePolicy)
-        self.spinBox_speed_2.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.spinBox_speed_2.setFont(font)
-        self.spinBox_speed_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.spinBox_speed_2.setWrapping(False)
-        self.spinBox_speed_2.setFrame(False)
-        self.spinBox_speed_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.spinBox_speed_2.setMinimum(-150)
-        self.spinBox_speed_2.setMaximum(6000)
-        self.spinBox_speed_2.setSingleStep(25)
-        self.spinBox_speed_2.setObjectName("spinBox_speed_2")
-        self.only_message = QtWidgets.QRadioButton(self.tab_4)
-        self.only_message.setGeometry(QtCore.QRect(30, 290, 221, 32))
-        self.only_message.setMinimumSize(QtCore.QSize(199, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        self.only_message.setFont(font)
-        self.only_message.setObjectName("only_message")
-        self.label_status_4 = QtWidgets.QLabel(self.tab_4)
-        self.label_status_4.setGeometry(QtCore.QRect(20, 420, 500, 60))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_status_4.sizePolicy().hasHeightForWidth())
-        self.label_status_4.setSizePolicy(sizePolicy)
-        self.label_status_4.setMinimumSize(QtCore.QSize(500, 60))
-        self.label_status_4.setMaximumSize(QtCore.QSize(16777215, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_status_4.setFont(font)
-        self.label_status_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_status_4.setObjectName("label_status_4")
-        self.spinBox_try_count_2 = QtWidgets.QSpinBox(self.tab_4)
-        self.spinBox_try_count_2.setGeometry(QtCore.QRect(382, 128, 1, 1))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spinBox_try_count_2.sizePolicy().hasHeightForWidth())
-        self.spinBox_try_count_2.setSizePolicy(sizePolicy)
-        self.spinBox_try_count_2.setMaximumSize(QtCore.QSize(1, 1))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.spinBox_try_count_2.setFont(font)
-        self.spinBox_try_count_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.spinBox_try_count_2.setFrame(False)
-        self.spinBox_try_count_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.spinBox_try_count_2.setMinimum(2)
-        self.spinBox_try_count_2.setMaximum(50)
-        self.spinBox_try_count_2.setObjectName("spinBox_try_count_2")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.tab_4)
+        self.gridLayout_5.setObjectName("gridLayout_5")
         self.select_btn = QtWidgets.QPushButton(self.tab_4)
-        self.select_btn.setGeometry(QtCore.QRect(26, 388, 200, 30))
-        self.select_btn.setMinimumSize(QtCore.QSize(200, 30))
+        self.select_btn.setMinimumSize(QtCore.QSize(0, 0))
+        self.select_btn.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.select_btn.setFont(font)
         self.select_btn.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -1345,14 +962,34 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.select_btn.setObjectName("select_btn")
+        self.gridLayout_5.addWidget(self.select_btn, 16, 1, 1, 1)
+        self.lineEdit_filename_4 = QtWidgets.QLineEdit(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_filename_4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_filename_4.setSizePolicy(sizePolicy)
+        self.lineEdit_filename_4.setMinimumSize(QtCore.QSize(200, 0))
+        self.lineEdit_filename_4.setMaximumSize(QtCore.QSize(450, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_filename_4.setFont(font)
+        self.lineEdit_filename_4.setAutoFillBackground(False)
+        self.lineEdit_filename_4.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_filename_4.setMaxLength(500)
+        self.lineEdit_filename_4.setFrame(False)
+        self.lineEdit_filename_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_filename_4.setClearButtonEnabled(True)
+        self.lineEdit_filename_4.setObjectName("lineEdit_filename_4")
+        self.gridLayout_5.addWidget(self.lineEdit_filename_4, 21, 1, 1, 5)
         self.pushButton_export_4 = QtWidgets.QPushButton(self.tab_4)
-        self.pushButton_export_4.setGeometry(QtCore.QRect(390, 480, 107, 34))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_export_4.sizePolicy().hasHeightForWidth())
         self.pushButton_export_4.setSizePolicy(sizePolicy)
-        self.pushButton_export_4.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.pushButton_export_4.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -1361,7 +998,6 @@ class Ui_MainWindow(object):
         self.pushButton_export_4.setFont(font)
         self.pushButton_export_4.setStyleSheet("QPushButton {\n"
 "    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -1387,102 +1023,23 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_export_4.setFlat(False)
         self.pushButton_export_4.setObjectName("pushButton_export_4")
-        self.textEdit_4 = QtWidgets.QTextEdit(self.tab_4)
-        self.textEdit_4.setGeometry(QtCore.QRect(0, 10, 531, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.textEdit_4.setFont(font)
-        self.textEdit_4.setStyleSheet("background-color:rgb(248, 244, 244);")
-        self.textEdit_4.setObjectName("textEdit_4")
-        self.tabWidget.addTab(self.tab_4, "")
-        self.tabWidget_2 = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget_2.setGeometry(QtCore.QRect(0, 0, 541, 211))
-        self.tabWidget_2.setStyleSheet("background-color:rgb(219, 229, 234);")
-        self.tabWidget_2.setObjectName("tabWidget_2")
-        self.login_tab = QtWidgets.QWidget()
-        self.login_tab.setObjectName("login_tab")
-        self.label = QtWidgets.QLabel(self.login_tab)
-        self.label.setGeometry(QtCore.QRect(70, 10, 41, 21))
+        self.gridLayout_5.addWidget(self.pushButton_export_4, 21, 6, 1, 1)
+        self.pushButton_close_4 = QtWidgets.QPushButton(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_close_4.sizePolicy().hasHeightForWidth())
+        self.pushButton_close_4.setSizePolicy(sizePolicy)
+        self.pushButton_close_4.setMinimumSize(QtCore.QSize(0, 0))
+        self.pushButton_close_4.setMaximumSize(QtCore.QSize(120, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.lineEdit_password = QtWidgets.QLineEdit(self.login_tab)
-        self.lineEdit_password.setGeometry(QtCore.QRect(160, 50, 302, 33))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_password.sizePolicy().hasHeightForWidth())
-        self.lineEdit_password.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_password.setFont(font)
-        self.lineEdit_password.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_password.setMaxLength(500)
-        self.lineEdit_password.setFrame(False)
-        self.lineEdit_password.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lineEdit_password.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_password.setClearButtonEnabled(True)
-        self.lineEdit_password.setObjectName("lineEdit_password")
-        self.lineEdit_email = QtWidgets.QLineEdit(self.login_tab)
-        self.lineEdit_email.setGeometry(QtCore.QRect(160, 10, 302, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_email.sizePolicy().hasHeightForWidth())
-        self.lineEdit_email.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_email.setFont(font)
-        self.lineEdit_email.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_email.setMaxLength(500)
-        self.lineEdit_email.setFrame(False)
-        self.lineEdit_email.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_email.setClearButtonEnabled(True)
-        self.lineEdit_email.setObjectName("lineEdit_email")
-        self.label_2 = QtWidgets.QLabel(self.login_tab)
-        self.label_2.setGeometry(QtCore.QRect(50, 50, 72, 33))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.checkBox_remember_me = QtWidgets.QCheckBox(self.login_tab)
-        self.checkBox_remember_me.setGeometry(QtCore.QRect(190, 90, 171, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_remember_me.sizePolicy().hasHeightForWidth())
-        self.checkBox_remember_me.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.checkBox_remember_me.setFont(font)
-        self.checkBox_remember_me.setChecked(False)
-        self.checkBox_remember_me.setObjectName("checkBox_remember_me")
-        self.pushButton_login = QtWidgets.QPushButton(self.login_tab)
-        self.pushButton_login.setGeometry(QtCore.QRect(210, 130, 99, 34))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_login.sizePolicy().hasHeightForWidth())
-        self.pushButton_login.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_login.setFont(font)
-        self.pushButton_login.setStyleSheet("QPushButton {\n"
-"    color: #1E1E1E;\n"
-"    border: 1px solid #555;\n"
+        self.pushButton_close_4.setFont(font)
+        self.pushButton_close_4.setStyleSheet("QPushButton {\n"
+"\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
 "    background: qradialgradient(\n"
@@ -1506,136 +1063,565 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.pushButton_login.setObjectName("pushButton_login")
-        self.tabWidget_2.addTab(self.login_tab, "")
-        self.registration_tab = QtWidgets.QWidget()
-        self.registration_tab.setObjectName("registration_tab")
-        self.textEdit_5 = QtWidgets.QTextEdit(self.registration_tab)
-        self.textEdit_5.setGeometry(QtCore.QRect(120, 0, 291, 41))
+        self.pushButton_close_4.setObjectName("pushButton_close_4")
+        self.gridLayout_5.addWidget(self.pushButton_close_4, 16, 6, 1, 1)
+        self.lineEdit_delay_4 = QtWidgets.QLineEdit(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_delay_4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_delay_4.setSizePolicy(sizePolicy)
+        self.lineEdit_delay_4.setMaximumSize(QtCore.QSize(80, 30))
         font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_delay_4.setFont(font)
+        self.lineEdit_delay_4.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_delay_4.setMaxLength(2)
+        self.lineEdit_delay_4.setFrame(False)
+        self.lineEdit_delay_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_delay_4.setClearButtonEnabled(True)
+        self.lineEdit_delay_4.setObjectName("lineEdit_delay_4")
+        self.gridLayout_5.addWidget(self.lineEdit_delay_4, 9, 6, 1, 1)
+        self.label_20 = QtWidgets.QLabel(self.tab_4)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(15)
+        self.label_20.setFont(font)
+        self.label_20.setObjectName("label_20")
+        self.gridLayout_5.addWidget(self.label_20, 6, 0, 1, 2)
+        self.connect_message = QtWidgets.QRadioButton(self.tab_4)
+        self.connect_message.setEnabled(True)
+        self.connect_message.setMinimumSize(QtCore.QSize(250, 30))
+        self.connect_message.setMaximumSize(QtCore.QSize(300, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
         font.setPointSize(14)
-        self.textEdit_5.setFont(font)
-        self.textEdit_5.setStyleSheet("background-color:rgb(248, 244, 244);")
-        self.textEdit_5.setObjectName("textEdit_5")
-        self.tabWidget_2.addTab(self.registration_tab, "")
+        self.connect_message.setFont(font)
+        self.connect_message.setChecked(True)
+        self.connect_message.setObjectName("connect_message")
+        self.gridLayout_5.addWidget(self.connect_message, 8, 0, 1, 2)
+        self.pushButton_start_4 = QtWidgets.QPushButton(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_start_4.sizePolicy().hasHeightForWidth())
+        self.pushButton_start_4.setSizePolicy(sizePolicy)
+        self.pushButton_start_4.setMinimumSize(QtCore.QSize(0, 0))
+        self.pushButton_start_4.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_start_4.setFont(font)
+        self.pushButton_start_4.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pushButton_start_4.setObjectName("pushButton_start_4")
+        self.gridLayout_5.addWidget(self.pushButton_start_4, 11, 6, 1, 1)
+        self.pause_btn_4 = QtWidgets.QPushButton(self.tab_4)
+        self.pause_btn_4.setMinimumSize(QtCore.QSize(0, 0))
+        self.pause_btn_4.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pause_btn_4.setFont(font)
+        self.pause_btn_4.setStyleSheet("QPushButton {\n"
+"    color: #000000;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #ffff00, stop: 1 #fed348\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pause_btn_4.setObjectName("pause_btn_4")
+        self.gridLayout_5.addWidget(self.pause_btn_4, 13, 6, 1, 1)
+        self.label_19 = QtWidgets.QLabel(self.tab_4)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(18)
+        font.setUnderline(True)
+        self.label_19.setFont(font)
+        self.label_19.setObjectName("label_19")
+        self.gridLayout_5.addWidget(self.label_19, 0, 0, 1, 7, QtCore.Qt.AlignHCenter)
+        self.spinBox_speed_2 = QtWidgets.QSpinBox(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.spinBox_speed_2.sizePolicy().hasHeightForWidth())
+        self.spinBox_speed_2.setSizePolicy(sizePolicy)
+        self.spinBox_speed_2.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.spinBox_speed_2.setFont(font)
+        self.spinBox_speed_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.spinBox_speed_2.setWrapping(False)
+        self.spinBox_speed_2.setFrame(False)
+        self.spinBox_speed_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.spinBox_speed_2.setMinimum(-150)
+        self.spinBox_speed_2.setMaximum(6000)
+        self.spinBox_speed_2.setSingleStep(25)
+        self.spinBox_speed_2.setObjectName("spinBox_speed_2")
+        self.gridLayout_5.addWidget(self.spinBox_speed_2, 1, 4, 1, 1)
+        self.browse_2 = QtWidgets.QPushButton(self.tab_4)
+        self.browse_2.setMinimumSize(QtCore.QSize(0, 0))
+        self.browse_2.setMaximumSize(QtCore.QSize(180, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.browse_2.setFont(font)
+        self.browse_2.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.browse_2.setObjectName("browse_2")
+        self.gridLayout_5.addWidget(self.browse_2, 2, 0, 1, 2)
+        self.label_11 = QtWidgets.QLabel(self.tab_4)
+        self.label_11.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_11.setFont(font)
+        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_11.setObjectName("label_11")
+        self.gridLayout_5.addWidget(self.label_11, 3, 3, 1, 1)
+        self.label_17 = QtWidgets.QLabel(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
+        self.label_17.setSizePolicy(sizePolicy)
+        self.label_17.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_17.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_17.setFont(font)
+        self.label_17.setObjectName("label_17")
+        self.gridLayout_5.addWidget(self.label_17, 1, 3, 1, 1)
+        self.spinBox_try_count_2 = QtWidgets.QSpinBox(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.spinBox_try_count_2.sizePolicy().hasHeightForWidth())
+        self.spinBox_try_count_2.setSizePolicy(sizePolicy)
+        self.spinBox_try_count_2.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.spinBox_try_count_2.setFont(font)
+        self.spinBox_try_count_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.spinBox_try_count_2.setFrame(False)
+        self.spinBox_try_count_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.spinBox_try_count_2.setMinimum(2)
+        self.spinBox_try_count_2.setMaximum(50)
+        self.spinBox_try_count_2.setObjectName("spinBox_try_count_2")
+        self.gridLayout_5.addWidget(self.spinBox_try_count_2, 3, 4, 1, 1)
+        self.only_message = QtWidgets.QRadioButton(self.tab_4)
+        self.only_message.setMinimumSize(QtCore.QSize(199, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(14)
+        self.only_message.setFont(font)
+        self.only_message.setObjectName("only_message")
+        self.gridLayout_5.addWidget(self.only_message, 10, 0, 1, 2)
+        self.label_status_4 = QtWidgets.QLabel(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_status_4.sizePolicy().hasHeightForWidth())
+        self.label_status_4.setSizePolicy(sizePolicy)
+        self.label_status_4.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_status_4.setMaximumSize(QtCore.QSize(500, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_status_4.setFont(font)
+        self.label_status_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_status_4.setObjectName("label_status_4")
+        self.gridLayout_5.addWidget(self.label_status_4, 19, 0, 1, 7)
+        self.label_10 = QtWidgets.QLabel(self.tab_4)
+        self.label_10.setMaximumSize(QtCore.QSize(80, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_10.setFont(font)
+        self.label_10.setObjectName("label_10")
+        self.gridLayout_5.addWidget(self.label_10, 21, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.filename_2 = QtWidgets.QLineEdit(self.tab_4)
+        self.filename_2.setMinimumSize(QtCore.QSize(480, 38))
+        self.filename_2.setMaximumSize(QtCore.QSize(480, 30))
+        self.filename_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.filename_2.setFrame(False)
+        self.filename_2.setObjectName("filename_2")
+        self.gridLayout_5.addWidget(self.filename_2, 4, 0, 1, 7)
+        self.only_connect = QtWidgets.QRadioButton(self.tab_4)
+        self.only_connect.setMinimumSize(QtCore.QSize(200, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(14)
+        self.only_connect.setFont(font)
+        self.only_connect.setObjectName("only_connect")
+        self.gridLayout_5.addWidget(self.only_connect, 9, 0, 1, 2)
+        self.comboX = QtWidgets.QComboBox(self.tab_4)
+        self.comboX.setMinimumSize(QtCore.QSize(200, 40))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.comboX.setFont(font)
+        self.comboX.setAutoFillBackground(False)
+        self.comboX.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.comboX.setFrame(False)
+        self.comboX.setObjectName("comboX")
+        self.comboX.addItem("")
+        self.comboX.addItem("")
+        self.comboX.addItem("")
+        self.gridLayout_5.addWidget(self.comboX, 13, 0, 1, 2)
+        self.label_16 = QtWidgets.QLabel(self.tab_4)
+        self.label_16.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_16.setFont(font)
+        self.label_16.setObjectName("label_16")
+        self.gridLayout_5.addWidget(self.label_16, 16, 3, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem, 20, 1, 1, 1)
+        self.label_15 = QtWidgets.QLabel(self.tab_4)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName("label_15")
+        self.gridLayout_5.addWidget(self.label_15, 9, 5, 1, 1, QtCore.Qt.AlignHCenter)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem1, 15, 1, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem2, 17, 1, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem3, 7, 0, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem4, 5, 0, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem5, 14, 1, 1, 1)
+        self.lineEdit_page_number_3 = QtWidgets.QLineEdit(self.tab_4)
+        self.lineEdit_page_number_3.setGeometry(QtCore.QRect(382, 382, 1, 1))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_page_number_3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_page_number_3.setSizePolicy(sizePolicy)
+        self.lineEdit_page_number_3.setMaximumSize(QtCore.QSize(1, 1))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_page_number_3.setFont(font)
+        self.lineEdit_page_number_3.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_page_number_3.setMaxLength(3)
+        self.lineEdit_page_number_3.setFrame(False)
+        self.lineEdit_page_number_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_page_number_3.setClearButtonEnabled(True)
+        self.lineEdit_page_number_3.setObjectName("lineEdit_page_number_3")
+        self.tabWidget.addTab(self.tab_4, "")
+        self.tab_5 = QtWidgets.QWidget()
+        self.tab_5.setObjectName("tab_5")
+        self.gridLayout_6 = QtWidgets.QGridLayout(self.tab_5)
+        self.gridLayout_6.setObjectName("gridLayout_6")
+        self.label_23 = QtWidgets.QLabel(self.tab_5)
+        self.label_23.setMaximumSize(QtCore.QSize(120, 20))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.label_23.setFont(font)
+        self.label_23.setObjectName("label_23")
+        self.gridLayout_6.addWidget(self.label_23, 3, 0, 1, 1)
+        self.label_24 = QtWidgets.QLabel(self.tab_5)
+        self.label_24.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.label_24.setFont(font)
+        self.label_24.setText("")
+        self.label_24.setObjectName("label_24")
+        self.gridLayout_6.addWidget(self.label_24, 3, 2, 1, 2, QtCore.Qt.AlignLeft)
+        self.label_license_status = QtWidgets.QLabel(self.tab_5)
+        self.label_license_status.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.label_license_status.setFont(font)
+        self.label_license_status.setText("")
+        self.label_license_status.setObjectName("label_license_status")
+        self.gridLayout_6.addWidget(self.label_license_status, 2, 2, 1, 2, QtCore.Qt.AlignLeft)
+        self.lineEdit_license_key = QtWidgets.QLineEdit(self.tab_5)
+        self.lineEdit_license_key.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.lineEdit_license_key.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_license_key.setFrame(False)
+        self.lineEdit_license_key.setObjectName("lineEdit_license_key")
+        self.gridLayout_6.addWidget(self.lineEdit_license_key, 5, 2, 2, 2)
+        self.label_22 = QtWidgets.QLabel(self.tab_5)
+        self.label_22.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.label_22.setFont(font)
+        self.label_22.setObjectName("label_22")
+        self.gridLayout_6.addWidget(self.label_22, 2, 0, 1, 1)
+        self.label_21 = QtWidgets.QLabel(self.tab_5)
+        self.label_21.setMaximumSize(QtCore.QSize(120, 30))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.label_21.setFont(font)
+        self.label_21.setObjectName("label_21")
+        self.gridLayout_6.addWidget(self.label_21, 5, 0, 2, 1)
+        self.label_25 = QtWidgets.QLabel(self.tab_5)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(18)
+        font.setUnderline(True)
+        self.label_25.setFont(font)
+        self.label_25.setObjectName("label_25")
+        self.gridLayout_6.addWidget(self.label_25, 0, 2, 1, 2, QtCore.Qt.AlignHCenter)
+        self.textBrowser = QtWidgets.QTextBrowser(self.tab_5)
+        self.textBrowser.setMinimumSize(QtCore.QSize(500, 0))
+        self.textBrowser.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.textBrowser.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout_6.addWidget(self.textBrowser, 1, 2, 1, 2)
+        self.pushButton_delete_old_key = QtWidgets.QPushButton(self.tab_5)
+        self.pushButton_delete_old_key.setMaximumSize(QtCore.QSize(220, 40))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(16)
+        self.pushButton_delete_old_key.setFont(font)
+        self.pushButton_delete_old_key.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pushButton_delete_old_key.setObjectName("pushButton_delete_old_key")
+        self.gridLayout_6.addWidget(self.pushButton_delete_old_key, 8, 3, 1, 1)
+        self.pushButton_activate = QtWidgets.QPushButton(self.tab_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_activate.sizePolicy().hasHeightForWidth())
+        self.pushButton_activate.setSizePolicy(sizePolicy)
+        self.pushButton_activate.setMinimumSize(QtCore.QSize(0, 0))
+        self.pushButton_activate.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_activate.setFont(font)
+        self.pushButton_activate.setStyleSheet("QPushButton {\n"
+"    color: #1E1E1E;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+"        );\n"
+"    }")
+        self.pushButton_activate.setObjectName("pushButton_activate")
+        self.gridLayout_6.addWidget(self.pushButton_activate, 8, 2, 1, 1)
+        self.tabWidget.addTab(self.tab_5, "")
+        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Linkedin Bot "))
-        self.pushButton_export.setText(_translate("MainWindow", "Export"))
-        self.pushButton_start.setText(_translate("MainWindow", "Start"))
+        self.people_option.setText(_translate("MainWindow", "Scrape People\'s Profile "))
+        self.lineEdit_delay.setText(_translate("MainWindow", "5"))
+        self.pause_btn.setText(_translate("MainWindow", "Pause"))
+        self.label_3.setText(_translate("MainWindow", "Filename"))
         self.label_7.setText(_translate("MainWindow", "Try Count"))
         self.lineEdit_page_number.setText(_translate("MainWindow", "30"))
-        self.label_4.setText(_translate("MainWindow", "Delay"))
-        self.lineEdit_delay.setText(_translate("MainWindow", "5"))
-        self.label_3.setText(_translate("MainWindow", "Filename"))
-        self.pushButton_close.setText(_translate("MainWindow", "Close"))
-        self.label_6.setText(_translate("MainWindow", "Speed"))
-        self.label_status.setText(_translate("MainWindow", "Remaining: 0 | Profile: 0 | Total Profile: 0"))
         self.label_5.setText(_translate("MainWindow", "Pages Number"))
-        self.people_option.setText(_translate("MainWindow", "Scrape People\'s Profile "))
+        self.label_4.setText(_translate("MainWindow", "Delay"))
+        self.label_status.setText(_translate("MainWindow", "Remaining: 0 | Profile: 0 | Total Profile: 0"))
+        self.pushButton_export.setText(_translate("MainWindow", "Export"))
+        self.pushButton_close.setText(_translate("MainWindow", "Close"))
+        self.pushButton_start.setText(_translate("MainWindow", "Start"))
+        self.label_6.setText(_translate("MainWindow", "Speed"))
         self.company_option.setText(_translate("MainWindow", "Scrape Company\'s Profile"))
-        self.textBrowser_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Calibri\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-weight:600;\">Select one of the Options</span></p></body></html>"))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Linkedin Sales Navigator Scrapper</p></body></html>"))
-        self.pause_btn.setText(_translate("MainWindow", "Pause"))
+        self.label.setText(_translate("MainWindow", "Linkedin Sales Navigator Scrapper"))
+        self.label_26.setText(_translate("MainWindow", "Select one of the Options"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Sales Scrapper"))
         self.pushButton_start_2.setText(_translate("MainWindow", "Start"))
-        self.pause_btn_2.setText(_translate("MainWindow", "Pause"))
-        self.label_8.setText(_translate("MainWindow", "         Delay"))
-        self.label_9.setText(_translate("MainWindow", "Filename"))
+        self.label_2.setText(_translate("MainWindow", "Linkedin Sales Navigator People\'s Profile Updater"))
         self.browse.setText(_translate("MainWindow", "add .Xlsx file"))
-        self.pushButton_close_2.setText(_translate("MainWindow", "Close"))
-        self.pushButton_export_2.setText(_translate("MainWindow", "Export"))
+        self.label_9.setText(_translate("MainWindow", "Filename"))
         self.label_status_2.setText(_translate("MainWindow", "Remaining: 0 | Profile: 0 | Total Profile: 0"))
+        self.pushButton_export_2.setText(_translate("MainWindow", "Export"))
         self.lineEdit_delay_2.setText(_translate("MainWindow", "5"))
-        self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Linkedin Sales Navigator People\'s Profile Updater</p></body></html>"))
+        self.pushButton_close_2.setText(_translate("MainWindow", "Close"))
+        self.pause_btn_2.setText(_translate("MainWindow", "Pause"))
+        self.label_8.setText(_translate("MainWindow", "Delay"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Sales Updater"))
-        self.pushButton_close_3.setText(_translate("MainWindow", "Close"))
         self.label_status_3.setText(_translate("MainWindow", "Remaining: 0 | Profile: 0 | Total Profile: 0"))
         self.pushButton_export_3.setText(_translate("MainWindow", "Export"))
-        self.label_12.setText(_translate("MainWindow", "Filename"))
-        self.label_13.setText(_translate("MainWindow", "Pages Number"))
+        self.label_18.setText(_translate("MainWindow", "Linkedin Job Scraper"))
         self.label_14.setText(_translate("MainWindow", "Delay"))
         self.lineEdit_delay_3.setText(_translate("MainWindow", "5"))
+        self.label_13.setText(_translate("MainWindow", "Pages Number"))
         self.lineEdit_page_number_2.setText(_translate("MainWindow", "30"))
-        self.pushButton_start_3.setText(_translate("MainWindow", "Start"))
-        self.textEdit_3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Linkedin Job Scraper</p></body></html>"))
+        self.label_12.setText(_translate("MainWindow", "Filename"))
         self.pause_btn_3.setText(_translate("MainWindow", "Pause"))
+        self.pushButton_start_3.setText(_translate("MainWindow", "Start"))
+        self.pushButton_close_3.setText(_translate("MainWindow", "Close"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Job Scraper"))
-        self.lineEdit_delay_4.setText(_translate("MainWindow", "5"))
-        self.label_10.setText(_translate("MainWindow", "Filename"))
-        self.label_11.setText(_translate("MainWindow", "Try Count"))
-        self.only_connect.setText(_translate("MainWindow", "  Send Only Connect"))
-        self.connect_message.setText(_translate("MainWindow", "  Send Connect && Message"))
+        self.select_btn.setText(_translate("MainWindow", "Select"))
+        self.pushButton_export_4.setText(_translate("MainWindow", "Export"))
         self.pushButton_close_4.setText(_translate("MainWindow", "Close"))
-        self.browse_2.setText(_translate("MainWindow", "add .Xlsx file"))
-        self.label_15.setText(_translate("MainWindow", "         Delay"))
+        self.lineEdit_delay_4.setText(_translate("MainWindow", "5"))
+        self.label_20.setText(_translate("MainWindow", "Select one of the Options"))
+        self.connect_message.setText(_translate("MainWindow", "  Send Connect && Message"))
         self.pushButton_start_4.setText(_translate("MainWindow", "Start"))
         self.pause_btn_4.setText(_translate("MainWindow", "Pause"))
-        self.comboX.setItemText(0, _translate("MainWindow", "Select Your Account Type"))
-        self.comboX.setItemText(1, _translate("MainWindow", "Sales_Navigator"))
-        self.comboX.setItemText(2, _translate("MainWindow", "Normal"))
-        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Calibri\'; font-size:16pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt;\">Select one of the Options</span></p></body></html>"))
-        self.label_16.setText(_translate("MainWindow", "Pages Number"))
-        self.lineEdit_page_number_3.setText(_translate("MainWindow", "30"))
+        self.label_19.setText(_translate("MainWindow", "Linkedin Connect Message Request Automation"))
+        self.browse_2.setText(_translate("MainWindow", "add .Xlsx file"))
+        self.label_11.setText(_translate("MainWindow", "Try Count"))
         self.label_17.setText(_translate("MainWindow", "Speed"))
         self.only_message.setText(_translate("MainWindow", " Send Only Message"))
         self.label_status_4.setText(_translate("MainWindow", "Remaining: 0 | Profile: 0 | Total Profile: 0"))
-        self.select_btn.setText(_translate("MainWindow", "Select"))
-        self.pushButton_export_4.setText(_translate("MainWindow", "Export"))
-        self.textEdit_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Linkedin Connect &amp; Message Request Automation</p></body></html>"))
+        self.label_10.setText(_translate("MainWindow", "Filename"))
+        self.only_connect.setText(_translate("MainWindow", "  Send Only Connect"))
+        self.comboX.setItemText(0, _translate("MainWindow", "Select Your Account Type"))
+        self.comboX.setItemText(1, _translate("MainWindow", "Sales_Navigator"))
+        self.comboX.setItemText(2, _translate("MainWindow", "Normal"))
+        self.label_16.setText(_translate("MainWindow", "Pages Number"))
+        self.label_15.setText(_translate("MainWindow", "Delay"))
+        self.lineEdit_page_number_3.setText(_translate("MainWindow", "30"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Connect && Message"))
-        self.label.setText(_translate("MainWindow", "Email"))
-        self.label_2.setText(_translate("MainWindow", "Password"))
-        self.checkBox_remember_me.setText(_translate("MainWindow", "Remember me"))
-        self.pushButton_login.setText(_translate("MainWindow", "Login"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.login_tab), _translate("MainWindow", "Login"))
-        self.textEdit_5.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">REGISTRATION</p></body></html>"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.registration_tab), _translate("MainWindow", "Registration"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        self.label_23.setText(_translate("MainWindow", "Registered To:"))
+        self.label_22.setText(_translate("MainWindow", "Your License:"))
+        self.label_21.setText(_translate("MainWindow", "License Key:"))
+        self.label_25.setText(_translate("MainWindow", "Notice Board"))
+        self.pushButton_delete_old_key.setText(_translate("MainWindow", "Delete Old Key"))
+        self.pushButton_activate.setText(_translate("MainWindow", "Activate"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("MainWindow", "About"))
